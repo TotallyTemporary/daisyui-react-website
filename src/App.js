@@ -1,19 +1,31 @@
 import './App.css';
-import { Avatar, Button, Theme, Hero } from 'react-daisyui';
+import IntroductionHeader from './IntroductionHeader.js'
+import Project from './Project.js'
 
 function App() {
   return (
-    <div className="flex bg-base-100">
-        <Hero className="absolute py-5 top-12 right-1/4 bg-base-100 rounded-md w-5/12 h-2/12">
-          <Hero.Content className="items-center text-neutral-content m-5">
-            <div className="top-0 py-5">
-              <h1 className="text-xl">Moi! Minä olen</h1>
-              <h1 className="text-4xl py-3 text-primary-content">Paavo Rotstén</h1>
-              <p  className="text-s py-2">Fullstack-harrastelija, jonka toiveena on edistyä ohjelmistokehittäjän uralla.</p>
-            </div>
-            <Avatar src="https://loremflickr.com/256/256" size="30rem" shape="circle"></Avatar>
-          </Hero.Content>
-        </Hero>
+    <div id="scroller-center" className="flex justify-center items-center">
+      <div id="scroller" className="flex gap-10 flex-col justify-center items-center w-5/12 h-auto">
+          <IntroductionHeader/>
+
+
+          <h1 className="text-4xl text-primary-content">Projektit</h1>
+          <Project 
+            name="Minecraft-klooni"
+            link="https://github.com/TotallyTemporary/3D-LWJGL-Project"
+            description="Tässä projektissa koitin luoda yksinkertaisen kloonin Minecraft-maailmasta käyttäen OpenGL:ää Javassa.
+              Peli sisältää loputtoman maailman, myös ylös sekä alas, maan jonka päällä kävellä, sekä mahdollisuuden rikkoa kuutioita.
+              "
+            notes={[
+              "Peli käyttää Mavenia rakentamiseen, ja kirjastoja LWJGL, JOML, PNGDecoder ja fastutil.",
+              "En omista pelin tekstuureita. Kuutiot ovat Minecraft-packista nimeltä 'Painterlypack' ja muut tekstuurit ovat Minecraftista itsestään.",
+              "Ohjelma on vielä hieman keskeneräinen, joten siinä ei ole paljoa 'pelimäistä' vielä. Haasteena projektissa oli lähinnä opetella OpenGL:n toimintaa.",
+              "Voit käyttää nappeja K ja C laittaaksesi päälle wireframe-moodin ja paremman resoluution tekstuurit ;)"
+            ]}
+            imagesRoot="/minecraft/"
+            images={["generic_view.png", "cave.png", "blocks_broken.png", "tower.png"]}
+          />
+      </div>
     </div>
   );
 }

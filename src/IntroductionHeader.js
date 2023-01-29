@@ -6,7 +6,7 @@ var IntroductionHeader = () => {
             <div className="top-0">
                 <h1 className="text-xl">Moi! Minä olen</h1>
                 <h1 className="text-4xl py-2 text-accent-content">Paavo Rotstén</h1>
-                <p  className="text-s py-2">Tietotekniikan opiskelija ja entinen harrastelija, jonka toiveena on edistyä ohjelmistokehittäjän uralla.</p>
+                <p  className="text-s py-2">Tietotekniikan opiskelija, jonka toiveena on edistyä ohjelmistokehittäjän uralla.</p>
             </div>
             <div className="top-0 h-full aspect-square">
                 <Avatar className="h-full" src="/headshot.jpg" size="30rem" shape="circle"></Avatar>

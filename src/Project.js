@@ -27,7 +27,7 @@ var Project = ({ name, description, link, notes, imagesRoot, images }) => {
             <h2 className="text-2xl">{name}</h2>
             <p  className="text-s py-2">{description}</p>
             <Button startIcon={GithubIcon} href={link}>Kokeile projektia tästä!</Button>
-            <p  className="text-s pt-2 text-primary-content">Huomautuksia:</p>
+            <p  className="text-s pt-2 text-accent-content">Huomautuksia:</p>
             <ul>
                 {notes.map((note_text, index) => 
                     <li className="" key={index}>{note_text}</li>

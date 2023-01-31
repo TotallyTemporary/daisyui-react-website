@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    nav {
+        @apply w-full h-20 bg-neutral p-2;
+        @apply flex justify-center align-middle;
+    }
+
+    .nav-link {
+        @apply px-5 py-2 ;
+        @apply text-xl text-accent-content uppercase font-bold tracking-wide;
+    }
+}

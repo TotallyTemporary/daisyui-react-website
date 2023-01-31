@@ -6,7 +6,6 @@
     /* this button itself, the text and the image all have this class */
     .button-element {
         @apply transition-all;
-        /* transition: all 150ms ease-in-out; */
     }
 
     .project-button {

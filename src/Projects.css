@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* this button itself, the text and the image all have this class */
+    .button-element {
+        @apply transition-all;
+        /* transition: all 150ms ease-in-out; */
+    }
+
+    .project-button {
+        @apply relative aspect-video w-full;
+    }
+
+    .project-button-image {
+        @apply w-full h-full opacity-40;
+    }
+
+    .project-button-text {
+        @apply text-2xl text-accent-content whitespace-nowrap select-none;
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+        pointer-events: none; /* hover goes through text and hits image */
+    }
+
+    /* when image is hovered over, expand image and expand text */
+    .project-button :hover,
+    .project-button :hover + .project-button-text {
+        @apply scale-110;
+    }
+}

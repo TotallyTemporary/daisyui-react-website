@@ -1,8 +1,14 @@
 import { Link, Button, Carousel } from 'react-daisyui'
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import GithubButton from './GithubButton';
 
-var Project = ({ name, description, link, notes, imagesRoot, images }) => {
+import Projects from './ProjectsData'
+
+var Project = () => {
+    let { projectID } = useParams();
+    let { name, description, link, notes, imagesRoot, images } = Projects[projectID]
+
     let [carouselIndex, setCarouselIndex] = useState(0)
 
     let moveLeft = () => {
@@ -19,7 +25,7 @@ var Project = ({ name, description, link, notes, imagesRoot, images }) => {
 
     return <div id="projects" className="flex flex-col items-start w-full">
         <div id={`project-${name}`}>
-            <h2 className="text-2xl">{name}</h2>
+            <h1 className="text-4xl py-2 text-accent-content">{name}</h1>
             <p  className="text-s py-2">{description}</p>
             <GithubButton title="Kokeile projektia tästä!" link={link}/>
             <p  className="text-s pt-2 text-accent-content">Huomautuksia:</p>

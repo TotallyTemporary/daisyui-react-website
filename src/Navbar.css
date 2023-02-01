@@ -4,7 +4,7 @@
 
 @layer components {
     nav {
-        @apply w-full h-20 bg-neutral p-2;
+        @apply w-full h-20 bg-base-200 p-2;
         @apply flex justify-center align-middle;
     }
 

@@ -9,7 +9,8 @@
     }
 
     .project-button {
-        @apply relative aspect-video w-full;
+        @apply relative aspect-video w-full overflow-hidden;
+        @apply rounded-sm;
     }
 
     .project-button-image {
@@ -17,7 +18,7 @@
     }
 
     .project-button-text {
-        @apply text-2xl text-accent-content whitespace-nowrap select-none;
+        @apply text-2xl text-accent-content text-center select-none;
         @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
         pointer-events: none; /* hover goes through text and hits image */
     }
